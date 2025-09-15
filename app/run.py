@@ -3,11 +3,16 @@
 from grades import Grades
 from grade_weights import GradeWeights
 from grade_calculator import GradeCalculator
+import json
 
 # This runs the grade calculation.
 
+with open("grades.json") as f:
+    grades = json.load(f)
+    print(grades)
+
 # Instatiate Grade and Weights objects
-my_grades = Grades()
+my_grades = Grades(grades)
 weights = GradeWeights()
 
 # Set grades achieved so far

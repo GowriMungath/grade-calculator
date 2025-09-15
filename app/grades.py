@@ -5,19 +5,19 @@ class Grades:
     Stores all individual class grades.
     """
     
-    def __init__(self, quiz_1=None, quiz_2=None, midterm=None, project=None, final=None) -> None:
+    def __init__(self, grades_object) -> None:
         """
         This constructor declares globale variables
         with the self prefix and sets them to null, 
         which is None in Python. The constructor is
         called when an object is created with Grades().
         """
-        self.quiz_1 = quiz_1
-        self.quiz_2 = quiz_2
-        self.midterm = midterm
-        self.project = project
-        self.final = final
-        
+        self.quiz_1 = grades_object["quiz1"]
+        self.quiz_2 = grades_object["quiz2"]
+        self.midterm = grades_object["midterm"]
+        self.project = grades_object["project"]
+        self.final = grades_object["final"]
+
     def set_all(self, quiz_1=None, quiz_2=None, midterm=None, project=None, final=None):
         """
         Sets the grades all at once. 
